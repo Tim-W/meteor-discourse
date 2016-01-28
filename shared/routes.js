@@ -3,7 +3,7 @@
  */
 FlowRouter.route("/overview", {
     name: "Overview",
-    action(params, queryParams) {
-        BlazeLayout.render("overview_layout", {navbar: "navbar", main: "main"})
+    action() {
+        BlazeLayout.render("overview_layout", {navbar: "navbar", main: "main", signUpModal: "signUpModal"})
     }
 });

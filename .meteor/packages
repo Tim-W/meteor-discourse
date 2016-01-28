@@ -24,3 +24,6 @@ meteortypescript:compiler
 kadira:blaze-layout
 semantic:ui
 flemay:less-autoprefixer
+useraccounts:semantic-ui
+accounts-meteor-developer
+accounts-password
