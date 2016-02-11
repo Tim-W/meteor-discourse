@@ -30,3 +30,4 @@ accounts-meteor-developer
 accounts-ui
 arillo:flow-router-helpers
 zimme:active-route
+aldeed:simple-schema
