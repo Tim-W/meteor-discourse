@@ -1,9 +1,49 @@
 <template name="navbar">
     <div class="ui inverted segment">
         <div class="ui inverted secondary menu">
-            <a id="signUp" class="active item right">
-                Sign up
-            </a>
+            <div class="right menu">
+                {{#if currentUser}}
+                    {{> searchBar}}
+                    {{> menu}}
+                    {{> userInfo}}
+                {{else}}
+                    {{> signUpButton}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="signUpButton">
+    <div class="ui inverted secondary menu">
+        <a href="{{pathFor "SignIn"}}" title="sign in" class="active item right">
+            Sign up/sign in
+        </a>
+    </div>
+</template>
+
+<template name="userInfo">
+    <a href="" id="email" class="item">
+        {{email}}
+    </a>
+</template>
+
+<template name="searchBar">
+    <div class="item">
+        <div class="ui icon input inverted">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+        </div>
+    </div>
+</template>
+
+<template name="menu">
+    <div class="ui dropdown item">
+        Language <i class="dropdown icon"></i>
+        <div class="menu">
+            <a class="item">English</a>
+            <a class="item">Russian</a>
+            <a class="item">Spanish</a>
         </div>
     </div>
 </template>

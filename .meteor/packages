@@ -25,5 +25,7 @@ kadira:blaze-layout
 semantic:ui
 flemay:less-autoprefixer
 useraccounts:semantic-ui
-accounts-meteor-developer
 accounts-password
+accounts-meteor-developer
+accounts-ui
+arillo:flow-router-helpers
