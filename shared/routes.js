@@ -5,18 +5,9 @@
 FlowRouter.route("/", {
     triggersEnter: [
         (context, redirect) => {
-            redirect("/overview")
+            redirect("/overview/latest")
         }
     ]
-});
-
-FlowRouter.route("/overview", {
-    name: "Overview",
-    action() {
-        BlazeLayout.render("overview_layout", {
-            navbar: "navbar", main: "main"
-        })
-    }
 });
 
 FlowRouter.route("/sign-in", {
@@ -32,6 +23,64 @@ FlowRouter.route("/route1", {
     action() {
         BlazeLayout.render("overview_layout", {
             navbar: "navbar", main: "atForm"
+        })
+    }
+});
+
+const overviewRoutes = FlowRouter.group({
+    prefix: "/overview",
+    name: "Overview"
+});
+
+overviewRoutes.route("/", {
+    triggersEnter: [
+        (context, redirect) => {
+            redirect("/overview/latest");
+        }
+    ]
+});
+
+overviewRoutes.route("/latest", {
+    name: "Overview.latest",
+    action() {
+        BlazeLayout.render("overview_layout", {
+            navbar: "navbar", main: "topicsListPage"
+        })
+    }
+});
+
+overviewRoutes.route("/new", {
+    name: "Overview.new",
+    action() {
+        BlazeLayout.render("overview_layout", {
+            navbar: "navbar", main: "topicsList"
+        })
+    }
+});
+
+overviewRoutes.route("/unread", {
+    name: "Overview.unread",
+    action() {
+        BlazeLayout.render("overview_layout", {
+            navbar: "navbar", main: "topicsList"
+        })
+    }
+});
+
+overviewRoutes.route("/top", {
+    name: "Overview.new",
+    action() {
+        BlazeLayout.render("overview_layout", {
+            navbar: "navbar", main: "topicsList"
+        })
+    }
+});
+
+FlowRouter.route("/categories", {
+    name: "Categories",
+    action() {
+        BlazeLayout.render("overview_layout", {
+            navbar: "navbar", main: "categoriesList"
         })
     }
 });
