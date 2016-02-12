@@ -84,3 +84,12 @@ FlowRouter.route("/categories", {
         })
     }
 });
+
+FlowRouter.route("/topic/:_id", {
+    name: "Topic",
+    action() {
+        BlazeLayout.render("overview_layout", {
+            navbar: "navbar", main: "topicDetail"
+        })
+    }
+})

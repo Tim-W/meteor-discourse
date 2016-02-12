@@ -5,10 +5,8 @@ Template["latestTopics"].helpers({
     }
 });
 
-TopicsSubs = new SubsManager();
-
 Template["latestTopics"].onCreated(function () {
     this.autorun(function () {
-        TopicsSubs.subscribe("allTopics");
+        subsManager.subscribe("allTopics");
     })
 });

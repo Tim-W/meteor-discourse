@@ -13,11 +13,7 @@
         </thead>
         <tbody>
         {{#each topic in latestTopicsList}}
-            <tr>
-                <td>
-                    {{topic.title}}
-                </td>
-            </tr>
+            {{> topicRow topic=topic}}
         {{/each}}
         </tbody>
     </table>
