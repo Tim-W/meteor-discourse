@@ -44,7 +44,7 @@ overviewRoutes.route("/latest", {
     name: "Overview.latest",
     action() {
         BlazeLayout.render("overview_layout", {
-            navbar: "navbar", main: "topicsListPage"
+            navbar: "navbar", main: "latestTopics"
         })
     }
 });

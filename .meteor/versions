@@ -64,6 +64,7 @@ mdg:validation-error@0.2.0
 meteor@1.1.10
 meteor-base@1.0.1
 meteor-developer@1.1.5
+meteorhacks:subs-manager@1.6.3
 meteortoys:allthings@2.3.1
 meteortoys:authenticate@2.1.0
 meteortoys:autopub@2.1.0
