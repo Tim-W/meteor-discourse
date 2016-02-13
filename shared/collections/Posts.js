@@ -1,15 +1,13 @@
 Posts = new Mongo.Collection("posts");
 
-const maximumPostLength = 1500;
-
 Schemas.Posts = new SimpleSchema({
     body: {
         type: String,
-        max: maximumPostLength
+        max: 1500
     },
-    //A list of Meteor.User _id's
     likes: {
-        type: [String]
+        type: [String],
+        regEx: SimpleSchema.RegEx.Id
     }
 });
 

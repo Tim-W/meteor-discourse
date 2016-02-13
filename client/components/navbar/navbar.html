@@ -1,6 +1,12 @@
 <template name="navbar">
     <div class="ui inverted segment">
         <div class="ui inverted secondary menu">
+            <!--Link to home menu - TODO should become an image-->
+            <div class="left menu">
+                <a href="/" class="item">
+                    Home
+                </a>
+            </div>
             <div class="right menu">
                 {{#if currentUser}}
                     {{> searchBar}}
@@ -12,6 +18,8 @@
             </div>
         </div>
     </div>
+
+    {{> listControls}}
 </template>
 
 <template name="signUpButton">
@@ -38,12 +46,6 @@
 </template>
 
 <template name="menu">
-    <div class="ui dropdown item">
-        Language <i class="dropdown icon"></i>
-        <div class="menu">
-            <a class="item">English</a>
-            <a class="item">Russian</a>
-            <a class="item">Spanish</a>
-        </div>
-    </div>
+
+        <a class="item" href="{{pathFor "Overview.latest"}}">Overview</a>
 </template>

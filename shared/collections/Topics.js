@@ -4,9 +4,9 @@ Schemas.Topics = new SimpleSchema({
     title: {
         type: String
     },
-    //A list of Post _id's
     posts: {
-        type: [String]
+        type: [String],
+        regEx: SimpleSchema.RegEx.Id
     }
 });
 

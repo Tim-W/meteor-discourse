@@ -80,7 +80,7 @@ FlowRouter.route("/categories", {
     name: "Categories",
     action() {
         BlazeLayout.render("overview_layout", {
-            navbar: "navbar", main: "categoriesList"
+            navbar: "navbar", main: "allCategories"
         })
     }
 });
@@ -92,4 +92,4 @@ FlowRouter.route("/topic/:_id", {
             navbar: "navbar", main: "topicDetail"
         })
     }
-})
+});
