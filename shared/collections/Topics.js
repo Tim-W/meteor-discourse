@@ -28,6 +28,8 @@ Topics.helpers({
         }
     },
     getPosts() {
-        return Posts.find({_id: {$in: this.posts}});
+        if(this.posts instanceof Array) {
+            return Posts.find({_id: {$in: this.posts}});
+        }
     }
 });
