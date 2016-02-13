@@ -14,7 +14,9 @@ Expects:
         </thead>
         <tbody>
         {{#each category in categories}}
-            {{>categoryDetailRow category=category}}
+            {{#transition in="fadeIn" out="fadeOut"}}
+                {{>categoryDetailRow category=category}}
+            {{/transition}}
         {{/each}}
         </tbody>
     </table>

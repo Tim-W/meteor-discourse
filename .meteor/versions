@@ -127,6 +127,7 @@ useraccounts:core@1.13.1
 useraccounts:semantic-ui@1.13.1
 webapp@1.2.3
 webapp-hashing@1.0.5
+webtempest:animate@0.1.9
 zimme:active-route@2.3.2
 zimme:collection-behaviours@1.1.3
 zimme:collection-timestampable@1.0.9
