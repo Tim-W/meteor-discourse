@@ -17,3 +17,9 @@ Schemas.Categories = new SimpleSchema({
 Categories.attachBehaviour("timestampable");
 
 Categories.attachSchema(Schemas.Categories);
+
+Categories.helpers({
+    isCategorized() {
+        return (this.name !== "uncategorized");
+    }
+});

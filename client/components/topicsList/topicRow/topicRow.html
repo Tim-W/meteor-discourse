@@ -5,5 +5,20 @@
                 {{topic.title}}
             </a>
         </td>
+        <td>
+            <!--Do not show the category if it is the uncategorized category-->
+            {{#if topic.getCategory.isCategorized}}
+            <!--TODO add link for category-->
+                <a href="{{pathFor "Overview.ByCategory" _id=topic.category}}"
+                   class="ui {{topic.getCategory.colour}} label">
+                    {{topic.getCategory.name}}
+                </a>
+            {{/if}}
+        </td>
+        <td>
+            {{#each post in topic.getPosts}}
+                {{> userAvatar user=post.getUser}}
+            {{/each}}
+        </td>
     </tr>
 </template>
