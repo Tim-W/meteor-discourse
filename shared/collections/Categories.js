@@ -1,4 +1,4 @@
-Categories = new Mongo.Collection("allCategories");
+Categories = new Mongo.Collection("categories");
 
 Schemas.Categories = new SimpleSchema({
     name: {
@@ -10,7 +10,10 @@ Schemas.Categories = new SimpleSchema({
         max: 300
     },
     colour: {
-        type: String,
-        regEx: /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/
+        type: String
     }
 });
+
+Categories.attachBehaviour("timestampable");
+
+Categories.attachSchema(Schemas.Categories);

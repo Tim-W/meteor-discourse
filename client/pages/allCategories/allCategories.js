@@ -4,6 +4,6 @@ Template["allCategories"].helpers({
     }
 });
 
-Template["allCategories"].onCreated(() => {
+Template["allCategories"].onCreated(function() {
     this.autorun(() => subsManager.subscribe("allCategories"));
 });

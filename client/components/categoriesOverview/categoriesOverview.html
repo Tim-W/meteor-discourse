@@ -1,13 +1,10 @@
 <!--
 A detailed list with descriptions per category
 Expects:
--   allCategories {Array}
+-   categories {Array}
 -->
 <template name="categoriesOverview">
-    {{#each category in categories}}
-
-    {{/each}}
-    <table class="ui very simple table">
+    <table class="ui basic table">
         <thead>
         <tr>
             <th>Category</th>
@@ -16,12 +13,57 @@ Expects:
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td class="ui red ribbon">Test</td>
-            <td>Discourse</td>
-            <td>Blah blah</td>
-            <td>blah blah blah</td>
-        </tr>
+        {{#each category in categories}}
+            <tr>
+                <td style="border-left: thick solid {{category.colour}}">
+                    <a href="{{pathFor "Overview.ByCategory" category=category}}" class="ui header">
+                        {{category.name}}
+                    </a>
+                    <p>{{category.description}}</p>
+                </td>
+                <td>
+                    <!--A list of the three topics in this category with the latest activity-->
+                    <!--TODO get those topics-->
+                    <div class="ui list">
+                        <a href="{{pathFor "Topic" _id=topic._id}}" class="item">
+                            Meteor.publish is not executed
+                            <a class="ui blue label">new</a>
+                            <span style="color: #3D3E3F">2h</span>
+                        </a>
+                        <a href="{{pathFor "Topic" _id=topic._id}}" class="item">
+                            Meteor.users returns empty set when used in Meteor.publish
+                            <span style="color: #3D3E3F">2h</span>
+                        </a>
+                        <a href="{{pathFor "Topic" _id=topic._id}}" class="item">
+                            [solved] Cfs:graphicsmagic alternative
+                            <span style="color: #3D3E3F">6h</span>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <!--Two items: the amount of posts per day and the amount of posts per week-->
+                    <!--TODO calculate those stats-->
+                    <div class="ui mini horizontal statistics">
+                        <div class="statistic">
+                            <div class="value">
+                                17
+                            </div>
+                            <div class="label">
+                                /day
+                            </div>
+                        </div>
+                        <div class="statistic">
+                            <div class="value">
+                                77
+                            </div>
+                            <div class="label">
+                                /week
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        {{/each}}
         </tbody>
     </table>
 </template>

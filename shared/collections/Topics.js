@@ -1,4 +1,4 @@
-Topics = new Mongo.Collection("Topics");
+Topics = new Mongo.Collection("topics");
 
 Schemas.Topics = new SimpleSchema({
     title: {
