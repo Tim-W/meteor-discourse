@@ -4,7 +4,7 @@ Expects:
 <template name="topicRow">
     <tr>
         <td>
-            <a href="{{pathFor "Topic" _id=topic._id}}">
+            <a href="{{pathFor "Topic" slug=topic.slug}}">
                 {{topic.title}}
             </a>
         </td>

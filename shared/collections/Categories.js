@@ -23,3 +23,5 @@ Categories.helpers({
         return (this.name !== "uncategorized");
     }
 });
+
+Categories.friendlySlugs();

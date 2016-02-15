@@ -5,9 +5,9 @@ Template["topicDetail"].helpers({
 });
 
 Template["topicDetail"].onCreated(function () {
-    const topicId = FlowRouter.getParam("_id");
+    const topicSlug = FlowRouter.getParam("slug");
     this.autorun(() => {
-        subsManager.subscribe("topic", topicId);
+        subsManager.subscribe("topic", topicSlug);
     });
 });
 

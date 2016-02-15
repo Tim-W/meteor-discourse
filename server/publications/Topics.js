@@ -1,7 +1,7 @@
-Meteor.publishComposite("topic", (topicId) => {
+Meteor.publishComposite("topic", (topicSlug) => {
     return {
         find() {
-            return Topics.find({_id: topicId})
+            return Topics.find({slug: topicSlug})
         },
         children: [
             {

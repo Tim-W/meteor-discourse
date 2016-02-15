@@ -40,3 +40,5 @@ Topics.helpers({
         }
     }
 });
+
+Topics.friendlySlugs("title");

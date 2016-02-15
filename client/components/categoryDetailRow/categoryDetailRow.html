@@ -14,16 +14,16 @@ Expects:
             <!--A list of the three topics in this category with the latest activity-->
             <!--TODO get those topics-->
             <div class="ui list">
-                <a href="{{pathFor "Topic" _id=topic._id}}" class="item">
+                <a href="{{pathFor "Topic" slug=topic.slug}}" class="item">
                     Meteor.publish is not executed
                     <a class="ui blue label">new</a>
                     <span style="color: #3D3E3F">2h</span>
                 </a>
-                <a href="{{pathFor "Topic" _id=topic._id}}" class="item">
+                <a href="{{pathFor "Topic" slug=topic.slug}}" class="item">
                     Meteor.users returns empty set when used in Meteor.publish
                     <span style="color: #3D3E3F">2h</span>
                 </a>
-                <a href="{{pathFor "Topic" _id=topic._id}}" class="item">
+                <a href="{{pathFor "Topic" slug=topic.slug}}" class="item">
                     [solved] Cfs:graphicsmagic alternative
                     <span style="color: #3D3E3F">6h</span>
                 </a>

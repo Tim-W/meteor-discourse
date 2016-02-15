@@ -85,7 +85,7 @@ FlowRouter.route("/categories", {
     }
 });
 
-FlowRouter.route("/topic/:_id", {
+FlowRouter.route("/topic/:slug", {
     name: "Topic",
     action() {
         BlazeLayout.render("overview_layout", {
