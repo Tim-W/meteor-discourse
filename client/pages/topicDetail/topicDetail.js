@@ -1,6 +1,11 @@
 Template["topicDetail"].helpers({
     topic() {
         return Topics.findOne();
+    },
+    defaultPost() {
+        return {
+            _id: "q84prLjrXjT69P9Kk"
+        }
     }
 });
 

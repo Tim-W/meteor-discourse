@@ -1,5 +1,14 @@
-Meteor.publish("topic", (topicId) => {
-    return Topics.findOne({_id: topicId});
+Meteor.publishComposite("topic", {
+    find(topicId) {
+        return Topics.find({_id: topicId})
+    },
+    children: [
+        {
+            find(topic) {
+                return Posts.find({_id: {$in: topic.posts}});
+            }
+        }
+    ]
 });
 
 Meteor.publishComposite("allTopics", {

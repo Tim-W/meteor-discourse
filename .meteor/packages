@@ -37,3 +37,5 @@ meteorhacks:subs-manager
 reywood:publish-composite
 dburles:collection-helpers
 webtempest:animate
+aldeed:autoform
+fabienb4:autoform-semantic-ui
