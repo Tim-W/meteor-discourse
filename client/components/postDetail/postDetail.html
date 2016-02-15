@@ -1,0 +1,22 @@
+<!--A detailed view for a post (typically in a Topic)
+Expects:
+-   post {Object}-->
+<template name="postDetail">
+    <div class="comment">
+        <a class="avatar">
+            <!--TODO show the avatar of the user-->
+            <img src="/images/avatar/small/joe.jpg">
+        </a>
+        <div class="content">
+            <!--TODO show full name-->
+            <a class="author">{{post.getUser._id}}</a>
+            <div class="metadata">
+                <div class="date">{{moFromNow post.updatedOrCreatedAt}}</div>
+            </div>
+            <div class="text"></div>
+            <div class="actions">
+                <a class="reply">Reply</a>
+            </div>
+        </div>
+    </div>
+</template>

@@ -28,8 +28,15 @@ Topics.helpers({
         }
     },
     getPosts() {
+        //Return all posts of this topic, normally sorted on createdAt
         if(this.posts instanceof Array) {
-            return Posts.find({_id: {$in: this.posts}});
+            return Posts.find({
+                _id: {$in: this.posts}
+            }, {
+                sort: {
+                    createdAt: 1
+                }
+            });
         }
     }
 });

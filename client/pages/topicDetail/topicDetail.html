@@ -6,21 +6,7 @@
     </div>
     <div class="ui comments">
         {{#each post in topic.getPosts}}
-            <div class="comment">
-                <a class="avatar">
-                    <img src="/images/avatar/small/joe.jpg">
-                </a>
-                <div class="content">
-                    <a class="author">Joe Henderson</a>
-                    <div class="metadata">
-                        <div class="date">1 day ago</div>
-                    </div>
-                    <div class="text"></div>
-                    <div class="actions">
-                        <a class="reply">Reply</a>
-                    </div>
-                </div>
-            </div>
+            {{> postDetail post=post}}
         {{/each}}
     </div>
 

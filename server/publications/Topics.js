@@ -1,14 +1,23 @@
-Meteor.publishComposite("topic", {
-    find(topicId) {
-        return Topics.find({_id: topicId})
-    },
-    children: [
-        {
-            find(topic) {
-                return Posts.find({_id: {$in: topic.posts}});
+Meteor.publishComposite("topic", (topicId) => {
+    return {
+        find() {
+            return Topics.find({_id: topicId})
+        },
+        children: [
+            {
+                find(topic) {
+                    return Posts.find({_id: {$in: topic.posts}});
+                },
+                children: [
+                    {
+                        find(post) {
+                            return Meteor.users.find({_id: post.createdBy});
+                        }
+                    }
+                ]
             }
-        }
-    ]
+        ]
+    }
 });
 
 Meteor.publishComposite("allTopics", {
